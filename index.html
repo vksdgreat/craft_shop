@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creations by Anita — Handcrafted Ethnic Wear & Home Aroma</title>
+  <meta name="description" content="Creations by Anita — handcrafted Kota Doria sarees, Barmer applique, soy wax candles and home décor. Shop on Amazon.in." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: "#F7F1E8",
+            parchment: "#EFE6D6",
+            sand: "#E4D5BE",
+            ink: "#1B140F",
+            espresso: "#3A2A22",
+            terracotta: "#B85C38",
+            clay: "#C9784A",
+            gold: "#C4A574",
+            wine: "#6B2D3C",
+            sage: "#5E6F5A",
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', "Georgia", "serif"],
+            sans: ['"Outfit"', "system-ui", "sans-serif"],
+          },
+          boxShadow: {
+            soft: "0 18px 50px -20px rgba(27, 20, 15, 0.28)",
+            card: "0 10px 30px -12px rgba(27, 20, 15, 0.18)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #F7F1E8; }
+    .grain::before {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      opacity: 0.045;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .ornament {
+      background-image: linear-gradient(90deg, transparent, #C4A574, transparent);
+    }
+    .hero-frame {
+      clip-path: polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%);
+    }
+    .nav-blur { backdrop-filter: blur(16px); }
+    input:focus, textarea:focus, select:focus { outline: none; }
+    .product-card img { transition: transform 0.7s ease; }
+    .product-card:hover img { transform: scale(1.06); }
+  </style>
+</head>
+<body class="grain font-sans text-ink antialiased">
+  <!-- Nav -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+      <a href="#home" class="group flex items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-full border border-gold/60 bg-ink text-gold">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M12 3c1.8 2.4 3 4.6 3 6.6A3 3 0 1 1 9 9.6C9 7.6 10.2 5.4 12 3Z" />
+            <path d="M7 14.5c1.6 1.2 3.3 1.8 5 1.8s3.4-.6 5-1.8" />
+            <path d="M6 19h12" />
+          </svg>
+        </span>
+        <span>
+          <span class="block font-serif text-xl leading-none tracking-wide text-ink">Creations by Anita</span>
+          <span class="mt-0.5 block text-[10px] uppercase tracking-[0.28em] text-terracotta">Handcrafted · India</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-8 text-sm font-medium text-espresso/80 md:flex">
+        <a href="#about" class="hover:text-terracotta">Our Story</a>
+        <a href="#products" class="hover:text-terracotta">Collection</a>
+        <a href="#contact" class="hover:text-terracotta">Contact</a>
+        <a href="https://www.amazon.in/s?me=A2KSKJLIKAUPQ5&marketplaceID=A21TJRUUN4KGV" target="_blank" rel="noopener" class="rounded-full bg-ink px-5 py-2 text-cream hover:bg-terracotta">Shop on Amazon</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden" aria-label="Open menu">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-sand bg-cream/95 px-5 py-4 md:hidden">
+      <div class="flex flex-col gap-3 text-sm font-medium">
+        <a href="#about" class="py-1">Our Story</a>
+        <a href="#products" class="py-1">Collection</a>
+        <a href="#contact" class="py-1">Contact</a>
+        <a href="https://www.amazon.in/s?me=A2KSKJLIKAUPQ5&marketplaceID=A21TJRUUN4KGV" target="_blank" rel="noopener" class="mt-1 rounded-full bg-ink px-5 py-2.5 text-center text-cream">Shop on Amazon</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden pt-28 lg:pt-32">
+    <div class="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-gold/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute right-0 top-40 h-80 w-80 rounded-full bg-terracotta/15 blur-3xl"></div>
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 lg:grid-cols-12 lg:px-8 lg:pb-24">
+      <div class="lg:col-span-6">
+        <p class="mb-4 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.32em] text-terracotta">
+          <span class="h-px w-8 bg-gold"></span>
+          Amazon India Seller
+        </p>
+        <h1 class="font-serif text-5xl leading-[1.05] text-ink sm:text-6xl lg:text-7xl">
+          Crafted by hand.<br />
+          <span class="italic text-terracotta">Chosen with heart.</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg font-light leading-relaxed text-espresso/80">
+          Kota Doria sarees, Barmer applique, soy-wax candles and home linens — a small atelier bringing Rajasthani craft and warm home fragrance to your doorstep.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a href="#products" class="rounded-full bg-terracotta px-7 py-3.5 text-sm font-medium text-cream shadow-soft hover:bg-wine">Explore the collection</a>
+          <a href="#contact" class="rounded-full border border-ink/15 bg-white/50 px-7 py-3.5 text-sm font-medium text-ink hover:border-terracotta hover:text-terracotta">Get in touch</a>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-8 text-sm text-espresso/70">
+          <div>
+            <p class="font-serif text-3xl text-ink">14</p>
+            <p class="mt-1 text-[11px] uppercase tracking-[0.2em]">Products live</p>
+          </div>
+          <div>
+            <p class="font-serif text-3xl text-ink">Soy wax</p>
+            <p class="mt-1 text-[11px] uppercase tracking-[0.2em]">Clean burn candles</p>
+          </div>
+          <div>
+            <p class="font-serif text-3xl text-ink">Handmade</p>
+            <p class="mt-1 text-[11px] uppercase tracking-[0.2em]">Ethnic textiles</p>
+          </div>
+        </div>
+      </div>
+      <div class="relative lg:col-span-6">
+        <div class="grid grid-cols-12 grid-rows-6 gap-3 sm:gap-4">
+          <div class="hero-frame col-span-7 row-span-4 overflow-hidden bg-sand shadow-soft">
+            <img src="images/81SyAxpgCgL.jpg" alt="Kota Doria saree in black, ivory and terracotta" class="h-full w-full object-cover" />
+          </div>
+          <div class="col-span-5 row-span-3 overflow-hidden rounded-[1.5rem] bg-sand shadow-card">
+            <img src="images/71olaXWItfL.jpg" alt="Bohemian Aroma lemongrass soy wax candle" class="h-full w-full object-cover" />
+          </div>
+          <div class="col-span-5 row-span-3 overflow-hidden rounded-[1.5rem] bg-sand shadow-card">
+            <img src="images/61sh-6GmVIL.jpg" alt="Bohemian Aroma rose crystal jar candle" class="h-full w-full object-cover" />
+          </div>
+          <div class="col-span-7 row-span-2 overflow-hidden rounded-[1.5rem] bg-sand shadow-card">
+            <img src="images/71n9jNsBVtL.jpg" alt="Cotton table mat and napkin set" class="h-full w-full object-cover object-center" />
+          </div>
+        </div>
+        <div class="absolute -bottom-4 left-6 hidden rounded-2xl bg-ink px-4 py-3 text-cream shadow-soft sm:block">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-gold">Fulfilled via</p>
+          <p class="font-serif text-lg leading-tight">Amazon.in</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="relative bg-ink text-cream">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-12 lg:px-8 lg:py-28">
+      <div class="lg:col-span-5">
+        <p class="text-[11px] uppercase tracking-[0.32em] text-gold">Our story</p>
+        <h2 class="mt-3 font-serif text-4xl leading-tight sm:text-5xl">An atelier of cloth, colour &amp; quiet light.</h2>
+        <div class="ornament mt-6 h-px w-24"></div>
+      </div>
+      <div class="lg:col-span-7 space-y-5 text-base font-light leading-relaxed text-cream/80">
+        <p>
+          <strong class="font-medium text-cream">Creations by Anita</strong> is a newly launched Amazon India store devoted to pieces that feel personal — Kota Doria sarees with printed pallus, traditional Barmer applique suit sets, and the Bohemian Aroma line of soy-wax candles poured into crystal and wooden jars.
+        </p>
+        <p>
+          Every listing is made to be gifted or lived with: breathable ethnic wear for festivals and everyday grace, and clean-burning fragrance for living rooms, bedrooms and quiet evenings at home.
+        </p>
+        <p>
+          Orders are placed securely on Amazon.in with Amazon’s A-to-Z Guarantee. We ship within two days of receiving an order, and most marketplace items can be returned within 30 days of delivery.
+        </p>
+        <div class="mt-8 grid gap-4 sm:grid-cols-3">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p class="font-serif text-2xl text-gold">Ethnic</p>
+            <p class="mt-1 text-sm text-cream/70">Sarees &amp; applique suits</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p class="font-serif text-2xl text-gold">Aroma</p>
+            <p class="mt-1 text-sm text-cream/70">Soy wax &amp; botanicals</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p class="font-serif text-2xl text-gold">Home</p>
+            <p class="mt-1 text-sm text-cream/70">Mats, napkins &amp; décor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="px-5 py-20 lg:px-8 lg:py-28">
+    <div class="mx-auto max-w-7xl">
+      <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <div>
+          <p class="text-[11px] uppercase tracking-[0.32em] text-terracotta">The collection</p>
+          <h2 class="mt-2 font-serif text-4xl sm:text-5xl">Shop the atelier</h2>
+          <p class="mt-3 max-w-xl font-light text-espresso/70">All 14 products currently offered by Creations by Anita. Buy securely on Amazon.in.</p>
+        </div>
+        <div id="filters" class="flex flex-wrap gap-2">
+          <button data-filter="all" class="filter-btn rounded-full bg-ink px-4 py-2 text-xs font-medium uppercase tracking-wider text-cream">All</button>
+          <button data-filter="ethnic" class="filter-btn rounded-full border border-ink/15 bg-white/60 px-4 py-2 text-xs font-medium uppercase tracking-wider text-espresso hover:border-terracotta">Ethnic wear</button>
+          <button data-filter="candles" class="filter-btn rounded-full border border-ink/15 bg-white/60 px-4 py-2 text-xs font-medium uppercase tracking-wider text-espresso hover:border-terracotta">Candles</button>
+          <button data-filter="home" class="filter-btn rounded-full border border-ink/15 bg-white/60 px-4 py-2 text-xs font-medium uppercase tracking-wider text-espresso hover:border-terracotta">Home décor</button>
+        </div>
+      </div>
+
+      <div id="grid" class="mt-12 grid gap-7 sm:grid-cols-2 xl:grid-cols-3"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="relative overflow-hidden bg-parchment">
+    <div class="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-terracotta/10 blur-3xl"></div>
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-12 lg:px-8 lg:py-28">
+      <div class="lg:col-span-5">
+        <p class="text-[11px] uppercase tracking-[0.32em] text-terracotta">Say hello</p>
+        <h2 class="mt-2 font-serif text-4xl sm:text-5xl">We would love to hear from you.</h2>
+        <p class="mt-5 max-w-md font-light leading-relaxed text-espresso/75">
+          Questions about a saree, a scent, a custom gift, or bulk festive orders? Send a note and we will get back to you.
+        </p>
+        <div class="mt-8 space-y-5 text-sm">
+          <div class="flex gap-4">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-ink text-gold">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </span>
+            <div>
+              <p class="font-medium">Amazon seller mailbox</p>
+              <p class="font-light text-espresso/70">Write “Contact Seller — A2KSKJLIKAUPQ5” via Amazon Help, or use this form.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-ink text-gold">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 7h18M5 7v12h14V7M8 7V5a4 4 0 018 0v2"/></svg>
+            </span>
+            <div>
+              <p class="font-medium">Orders &amp; returns</p>
+              <p class="font-light text-espresso/70">Place orders on Amazon.in. Returns within 30 days through Amazon’s Return Centre.</p>
+            </div>
+          </div>
+          <a href="https://www.amazon.in/s?me=A2KSKJLIKAUPQ5&marketplaceID=A21TJRUUN4KGV" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-terracotta hover:underline">
+            Visit the Amazon storefront
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <form id="contactForm" class="rounded-[1.75rem] bg-cream p-6 shadow-soft sm:p-8" novalidate>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label class="block text-sm">
+              <span class="mb-1.5 block font-medium">Full name</span>
+              <input required name="name" type="text" placeholder="Your name" class="w-full rounded-xl border border-sand bg-white px-4 py-3 text-sm placeholder:text-espresso/35 focus:border-terracotta" />
+            </label>
+            <label class="block text-sm">
+              <span class="mb-1.5 block font-medium">Email</span>
+              <input required name="email" type="email" placeholder="you@email.com" class="w-full rounded-xl border border-sand bg-white px-4 py-3 text-sm placeholder:text-espresso/35 focus:border-terracotta" />
+            </label>
+            <label class="block text-sm">
+              <span class="mb-1.5 block font-medium">Phone</span>
+              <input name="phone" type="tel" placeholder="+91" class="w-full rounded-xl border border-sand bg-white px-4 py-3 text-sm placeholder:text-espresso/35 focus:border-terracotta" />
+            </label>
+            <label class="block text-sm">
+              <span class="mb-1.5 block font-medium">Topic</span>
+              <select name="topic" class="w-full rounded-xl border border-sand bg-white px-4 py-3 text-sm focus:border-terracotta">
+                <option>Product enquiry</option>
+                <option>Wholesale / bulk order</option>
+                <option>Custom gift</option>
+                <option>Order support</option>
+                <option>Something else</option>
+              </select>
+            </label>
+          </div>
+          <label class="mt-5 block text-sm">
+            <span class="mb-1.5 block font-medium">Message</span>
+            <textarea required name="message" rows="5" placeholder="Tell us what you are looking for…" class="w-full resize-y rounded-xl border border-sand bg-white px-4 py-3 text-sm placeholder:text-espresso/35 focus:border-terracotta"></textarea>
+          </label>
+          <p id="formError" class="mt-3 hidden text-sm text-wine"></p>
+          <button type="submit" class="mt-6 w-full rounded-full bg-terracotta py-3.5 text-sm font-medium text-cream shadow-card hover:bg-wine sm:w-auto sm:px-10">
+            Send message
+          </button>
+        </form>
+        <div id="formSuccess" class="hidden rounded-[1.75rem] bg-ink p-10 text-cream shadow-soft">
+          <p class="font-serif text-4xl">Thank you.</p>
+          <p class="mt-3 max-w-md font-light text-cream/75">Your message is ready. If your mail app opened, hit send — otherwise copy the note and write to us through Amazon’s Contact Seller page.</p>
+          <button id="resetForm" class="mt-6 rounded-full border border-gold/40 px-6 py-2.5 text-sm text-gold hover:bg-gold hover:text-ink">Send another</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-ink text-cream/70">
+    <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-10 sm:flex-row sm:items-center lg:px-8">
+      <div>
+        <p class="font-serif text-2xl text-cream">Creations by Anita</p>
+        <p class="mt-1 text-xs uppercase tracking-[0.22em] text-gold">Handcrafted ethnic wear &amp; home aroma</p>
+      </div>
+      <p class="text-sm">© <span id="year"></span> Creations by Anita. Products sold on Amazon.in.</p>
+    </div>
+  </footer>
+
+  <script>
+    const products = [
+      {
+        asin: "B0H6R1X2GC",
+        title: "Kota Doria Saree",
+        blurb: "Lightweight ethnic wear in black, ivory and terracotta block print.",
+        price: "2,100",
+        mrp: "2,400",
+        cat: "ethnic",
+        img: "images/81SyAxpgCgL.jpg",
+        tag: "Saree",
+      },
+      {
+        asin: "B0H8W29GD3",
+        title: "Lemongrass Soy Wax Candle",
+        blurb: "270g diamond-cut glass jar. Fresh citrus aroma, ~24 hour clean burn.",
+        price: "599",
+        mrp: "650",
+        cat: "candles",
+        img: "images/71olaXWItfL.jpg",
+        tag: "Bohemian Aroma",
+      },
+      {
+        asin: "B0H8K5TBB6",
+        title: "Barmer Applique Suit Set",
+        blurb: "Traditional cut-work 3-piece unstitched set — top, bottom and dupatta.",
+        price: "2,400",
+        mrp: "2,750",
+        cat: "ethnic",
+        img: "images/61nrTkCwu1L.jpg",
+        tag: "Suit set",
+      },
+      {
+        asin: "B0H3BRZB5M",
+        title: "Kota Doria Saree",
+        blurb: "Comfortable, elegant Kota Doria with a richly printed pallu.",
+        price: "2,100",
+        mrp: "2,400",
+        cat: "ethnic",
+        img: "images/81qRit-RIQL.jpg",
+        tag: "Saree",
+      },
+      {
+        asin: "B0H6K7ZZDN",
+        title: "Handcrafted Soya Wax Candle",
+        blurb: "Handmade soy wax with aroma-oil fragrance. Compact everyday candle.",
+        price: "375",
+        mrp: "450",
+        cat: "candles",
+        img: "images/71BnnQIMBWL.jpg",
+        tag: "Candle",
+      },
+      {
+        asin: "B0H9KQPKD9",
+        title: "Applique Cotton Suit Set",
+        blurb: "Soft breathable 3-piece unstitched dress material for daily and festive wear.",
+        price: "2,400",
+        mrp: "2,750",
+        cat: "ethnic",
+        img: "images/610Tw6gdu3L.jpg",
+        tag: "Suit set",
+      },
+      {
+        asin: "B0GN3QGFWG",
+        title: "Crystal Jar Soy Wax Candle",
+        blurb: "Handcrafted crystal jar with premium soy wax and a soothing fragrance.",
+        price: "560",
+        mrp: "750",
+        cat: "candles",
+        img: "images/812HIJQyPiL.jpg",
+        tag: "Crystal jar",
+      },
+      {
+        asin: "B0HBLLMNGS",
+        title: "Crystal Jar Candle — Rose",
+        blurb: "Luxury glass jar, natural soy wax, rose fragrance. Home décor & gift.",
+        price: "475",
+        mrp: null,
+        cat: "candles",
+        img: "images/61sh-6GmVIL.jpg",
+        tag: "Rose",
+      },
+      {
+        asin: "B0HBF8V2RH",
+        title: "Crystal Jar Candle — Lemongrass",
+        blurb: "Long-burning aromatherapy candle in a luxury glass jar.",
+        price: "475",
+        mrp: null,
+        cat: "candles",
+        img: "images/61LM-mcTXnL.jpg",
+        tag: "Lemongrass",
+      },
+      {
+        asin: "B0H9ZWWKMH",
+        title: "Crystal Jar Aromatherapy Candle",
+        blurb: "Handmade natural soy wax in a crystal jar. Gift-ready home fragrance.",
+        price: "550",
+        mrp: "650",
+        cat: "candles",
+        img: "images/71ynPJje4pL.jpg",
+        tag: "Crystal jar",
+      },
+      {
+        asin: "B0HBZRYYP8",
+        title: "Mandala Tin Jar Candles",
+        blurb: "Set of 4 decorative mandala-art tin jars. Festive gifting & ambience.",
+        price: "899",
+        mrp: null,
+        cat: "candles",
+        img: "images/616S2JJH0EL.jpg",
+        tag: "Set of 4",
+      },
+      {
+        asin: "B0HCDL8FKX",
+        title: "Wooden Jar Soy Wax Candle",
+        blurb: "Plant-based soy wax in a handmade wooden jar. Housewarming & Diwali gift.",
+        price: "999",
+        mrp: "1,100",
+        cat: "candles",
+        img: "images/61E6Pa9HJ6L.jpg",
+        tag: "Wooden jar",
+      },
+      {
+        asin: "B0H8K6P2YB",
+        title: "Cotton Table Mat & Napkin Set",
+        blurb: "Elegant reusable placements with matching napkins for every occasion.",
+        price: "1,099",
+        mrp: "1,299",
+        cat: "home",
+        img: "images/71n9jNsBVtL.jpg",
+        tag: "Dining",
+      },
+      {
+        asin: "B0GN3N5YSB",
+        title: "Handcrafted Soya Wax Candle",
+        blurb: "Poured with soy wax and aroma-oil fragrance for a calm, lasting scent.",
+        price: "550",
+        mrp: "750",
+        cat: "candles",
+        img: "images/812HIJQyPiL.jpg",
+        tag: "Candle",
+      },
+    ];
+
+    const grid = document.getElementById("grid");
+    const activeBtn = "rounded-full bg-ink px-4 py-2 text-xs font-medium uppercase tracking-wider text-cream";
+    const idleBtn = "rounded-full border border-ink/15 bg-white/60 px-4 py-2 text-xs font-medium uppercase tracking-wider text-espresso hover:border-terracotta";
+
+    function card(p) {
+      const url = `https://www.amazon.in/dp/${p.asin}`;
+      const mrp = p.mrp
+        ? `<span class="ml-2 text-sm text-espresso/40 line-through">₹${p.mrp}</span>`
+        : "";
+      return `
+        <article class="product-card group flex flex-col overflow-hidden rounded-[1.5rem] bg-white shadow-card" data-cat="${p.cat}">
+          <div class="relative aspect-[4/5] overflow-hidden bg-parchment">
+            <img src="${p.img}" alt="${p.title}" class="h-full w-full object-cover" />
+            <span class="absolute left-4 top-4 rounded-full bg-cream/90 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-espresso">${p.tag}</span>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="font-serif text-2xl leading-snug">${p.title}</h3>
+            <p class="mt-2 flex-1 text-sm font-light leading-relaxed text-espresso/70">${p.blurb}</p>
+            <div class="mt-4 flex items-end justify-between gap-3">
+              <p class="font-medium">
+                <span class="font-serif text-3xl">₹${p.price}</span>${mrp}
+              </p>
+              <a href="${url}" target="_blank" rel="noopener" class="rounded-full bg-ink px-4 py-2 text-xs font-medium uppercase tracking-wider text-cream hover:bg-terracotta">Buy on Amazon</a>
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function render(filter) {
+      grid.innerHTML = products
+        .filter((p) => filter === "all" || p.cat === filter)
+        .map(card)
+        .join("");
+    }
+
+    render("all");
+
+    document.querySelectorAll(".filter-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach((b) => (b.className = "filter-btn " + idleBtn));
+        btn.className = "filter-btn " + activeBtn;
+        render(btn.dataset.filter);
+      });
+    });
+
+    const nav = document.getElementById("nav");
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+    mobileMenu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => mobileMenu.classList.add("hidden")));
+    const paintNav = () => {
+      if (window.scrollY > 12) {
+        nav.classList.add("nav-blur", "bg-cream/85", "border-b", "border-sand/80", "shadow-sm");
+      } else {
+        nav.classList.remove("nav-blur", "bg-cream/85", "border-b", "border-sand/80", "shadow-sm");
+      }
+    };
+    paintNav();
+    window.addEventListener("scroll", paintNav, { passive: true });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const form = document.getElementById("contactForm");
+    const success = document.getElementById("formSuccess");
+    const formError = document.getElementById("formError");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (!data.name?.trim() || !data.email?.trim() || !data.message?.trim()) {
+        formError.textContent = "Please fill in your name, email and message.";
+        formError.classList.remove("hidden");
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+        formError.textContent = "Please enter a valid email address.";
+        formError.classList.remove("hidden");
+        return;
+      }
+      formError.classList.add("hidden");
+      const body = [
+        `Name: ${data.name}`,
+        `Email: ${data.email}`,
+        `Phone: ${data.phone || "—"}`,
+        `Topic: ${data.topic}`,
+        "",
+        data.message,
+      ].join("\n");
+      const mailto = `mailto:?subject=${encodeURIComponent("Creations by Anita — " + data.topic)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+      form.classList.add("hidden");
+      success.classList.remove("hidden");
+    });
+    document.getElementById("resetForm").addEventListener("click", () => {
+      form.reset();
+      success.classList.add("hidden");
+      form.classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
